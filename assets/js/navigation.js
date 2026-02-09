@@ -1,21 +1,21 @@
 /**
- * Spotlight – Responsive navigation toggle.
+ * Spotlight – Mobile navigation toggle.
  *
  * @package Spotlight
  */
 (function () {
     'use strict';
 
-    var toggle = document.querySelector('.menu-toggle');
-    var nav = document.querySelector('.main-navigation');
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var menu   = document.getElementById('mobile-menu');
 
-    if (!toggle || !nav) {
+    if (!toggle || !menu) {
         return;
     }
 
     toggle.addEventListener('click', function () {
-        nav.classList.toggle('toggled');
         var expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('hidden');
     });
 })();
