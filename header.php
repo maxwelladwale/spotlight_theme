@@ -61,7 +61,7 @@ defined('ABSPATH') || exit;
                 <a href="#" class="text-white/80 hover:text-white text-sm font-medium transition-colors">
                     <?php esc_html_e('Sign in', 'spotlight'); ?>
                 </a>
-                <a href="#" class="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors">
+                <a href="#" class="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-md transition-colors">
                     <?php esc_html_e('Sign up', 'spotlight'); ?>
                 </a>
             </div>
@@ -88,7 +88,7 @@ defined('ABSPATH') || exit;
                 ?>
                 <div class="pt-3 border-t border-white/10 flex flex-col gap-2">
                     <a href="#" class="text-white/80 text-sm"><?php esc_html_e('Sign in', 'spotlight'); ?></a>
-                    <a href="#" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-full text-center">
+                    <a href="#" class="bg-accent text-white text-sm font-semibold px-5 py-2 rounded-md text-center">
                         <?php esc_html_e('Sign up', 'spotlight'); ?>
                     </a>
                 </div>

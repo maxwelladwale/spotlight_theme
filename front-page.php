@@ -23,9 +23,8 @@ get_header();
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
             <div class="max-w-2xl">
                 <!-- Decorative dots -->
-                <div class="mb-6">
-                    <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
-                         alt="" class="h-4 w-auto" aria-hidden="true">
+                <div class="dot-wave mb-6" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
                 </div>
 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
@@ -58,6 +57,13 @@ get_header();
                 <?php esc_html_e('Ready, Set,', 'spotlight'); ?>
                 <span class="text-[#F2970D] font-display"><?php esc_html_e('Staff', 'spotlight'); ?></span>
             </h2>
+
+            <!-- Decorative dots -->
+            <div class="flex justify-center mb-6">
+                <div class="dot-wave" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
 
             <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
                 <?php esc_html_e('When a project gets approved, momentum matters. But for tech leaders, that urgency collides with slow, costly, unpredictable hiring cycles. Your Spotlight candidate hub changes that.', 'spotlight'); ?>
@@ -283,8 +289,9 @@ get_header();
 
             <!-- Decorative dots -->
             <div class="flex justify-center mb-6">
-                <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
-                     alt="" class="h-3 w-auto" aria-hidden="true">
+                <div class="dot-wave" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
             </div>
 
             <p class="text-white/60 text-lg mb-10 max-w-xl mx-auto">
