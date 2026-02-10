@@ -17,6 +17,14 @@ add_action('wp_enqueue_scripts', function () {
         false
     );
 
+    // The core GSAP library
+    wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js', array(), false, true );
+    // ScrollTrigger - with gsap.js passed as a dependency
+    wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
+    // Your animation code file - with gsap.js passed as a dependency
+    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/assets/js/app.js', array('gsap-js', 'gsap-st'), false, true );
+
+
     // Tailwind config (custom colours, fonts).
     wp_add_inline_script('tailwindcss', "
         tailwind.config = {

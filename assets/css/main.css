@@ -4,11 +4,6 @@
    that Tailwind can't reach (Gutenberg blocks, comments, widgets, etc.).
    ========================================================================== */
 
-/* --- Smooth scrolling --- */
-html {
-    scroll-behavior: smooth;
-}
-
 /* --- WordPress nav-menu list resets (applied via Tailwind where possible) --- */
 #primary-menu li {
     list-style: none;

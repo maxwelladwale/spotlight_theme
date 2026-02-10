@@ -15,13 +15,15 @@ get_header();
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
-    <section class="relative bg-brand-900 bg-left bg-no-repeat min-h-[80vh] flex items-baseline"
+    <section class="scroll-panel relative bg-brand-900 bg-left bg-no-repeat min-h-[80vh] flex items-baseline"
              style="background-image: url('<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/HeadlineImage.jpg'); ?>'); background-size: 114%;">
-        <!-- Dark overlay for text readability -->
-        <div class="absolute inset-0 bg-brand-900/60"></div>
+        <div id="">
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
-            <div class="max-w-2xl">
+            <!-- Dark overlay for text readability -->
+            <div class="absolute inset-0 bg-brand-900/60"></div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full inner-banner">
+                <div class="max-w-2xl">
                 <!-- Decorative dots -->
                 <div class="dot-wave mb-6" aria-hidden="true">
                     <span></span><span></span><span></span><span></span><span></span>
@@ -41,6 +43,7 @@ get_header();
                 </p>
             </div>
         </div>
+    </div>
     </section>
 
     <!-- ============================================================
@@ -51,8 +54,8 @@ get_header();
     <!-- ============================================================
          READY, SET, STAFF
          ============================================================ -->
-    <section id="features" class="py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section id="features" class="scroll-panel py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center inner-banner">
 
             <span class="inline-block bg-brand-900 text-white text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6">
                 <?php esc_html_e('Candidate Hub', 'spotlight'); ?>
@@ -138,8 +141,8 @@ get_header();
     <!-- ============================================================
          CANDIDATE PROFILES – DARK SECTION
          ============================================================ -->
-    <section class="relative py-20 md:py-28">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 100%;">
+    <section class="scroll-panel relative py-20 md:py-28">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8 inner-banner" style="max-width: 100%;">
 
             <!-- Mockup Area with overlaid heading -->
             <div class="relative mb-16">
@@ -217,7 +220,7 @@ get_header();
          ============================================================ -->
 
     <!-- Testimonial 1 — white bg, text left, image right, blue dots -->
-    <section id="testimonials" class="bg-white py-16 md:py-24">
+    <section id="testimonials" class="scroll-panel bg-white py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="flex-1">
@@ -239,7 +242,7 @@ get_header();
     </section>
 
     <!-- Testimonial 2 — light blue-gray bg, image left, text right, red dots -->
-    <section class="bg-[#f0f5fa] py-16 md:py-24">
+    <section class="scroll-panel bg-[#f0f5fa] py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
                 <div class="flex-1">
@@ -261,11 +264,11 @@ get_header();
     </section>
 
     <!-- Testimonial 3 — white bg, text left, image right, blue dots -->
-    <section class="bg-white py-16 md:py-24">
+    <section class="scroll-panel bg-white py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="flex-1">
-                    <blockquote class="text-xl sm:text-2xl lg:text-3xl font-medium text-brand-900 leading-snug">
+                    <blockquote class="text-xl sm:text-2xl lg:text-3xl font-medium text-brand-900 leading-snug" id="blockquote">
                         <?php esc_html_e('Spotlight let us start a major initiative immediately. No delays, no friction just instant momentum.', 'spotlight'); ?>
                     </blockquote>
                 </div>
