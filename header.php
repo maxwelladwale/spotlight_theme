@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <?php else : ?>
                     <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/logos/spotlight_logo_3.png'); ?>"
                          alt="<?php bloginfo('name'); ?>"
-                         class="h-10 w-auto">
+                         class="h-12 w-auto">
                 <?php endif; ?>
             </a>
 
