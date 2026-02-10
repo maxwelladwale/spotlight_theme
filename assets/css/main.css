@@ -204,3 +204,51 @@ html {
 .dot-wave span:nth-child(3) { background-color: #E04F5F; animation-delay: 0.3s; }
 .dot-wave span:nth-child(4) { background-color: #2CA58D; animation-delay: 0.45s; }
 .dot-wave span:nth-child(5) { background-color: #F2970D; animation-delay: 0.6s; }
+
+/* --- Page preloader --- */
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #091C2A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    width: 75px;
+    aspect-ratio: 1;
+    display: grid;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    grid-area: 1/1;
+    width: 35px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px #2CA58D inset;
+    filter: drop-shadow(40px 40px 0 #F2970D);
+    animation: loaderMorph 2s infinite alternate;
+}
+
+.loader:after {
+    margin: 0 0 0 auto;
+    box-shadow: 0 0 0 3px #E04F5F inset;
+    filter: drop-shadow(-40px 40px 0 #2CA58D);
+    animation-delay: -1s;
+}
+
+@keyframes loaderMorph {
+    0%, 10%   { border-radius: 0; }
+    30%, 40%  { border-radius: 50% 0; }
+    60%, 70%  { border-radius: 50%; }
+    90%, 100% { border-radius: 0 50%; }
+}

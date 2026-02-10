@@ -19,6 +19,22 @@ defined('ABSPATH') || exit;
 <body <?php body_class('font-sans text-gray-800 antialiased'); ?>>
 <?php wp_body_open(); ?>
 
+<!-- Page Preloader -->
+<div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader"></div>
+</div>
+<script>
+window.addEventListener('load', function () {
+    var loader = document.getElementById('page-loader');
+    if (loader) {
+        loader.classList.add('hidden');
+        loader.addEventListener('transitionend', function () {
+            loader.remove();
+        });
+    }
+});
+</script>
+
 <div id="page" class="min-h-screen flex flex-col">
 
     <a class="sr-only focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:z-[100000] focus:bg-brand-900 focus:text-white focus:px-5 focus:py-3" href="#primary">
