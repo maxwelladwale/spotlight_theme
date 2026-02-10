@@ -15,46 +15,25 @@ get_header();
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
-    <section class="relative bg-brand-900 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 flex flex-col md:flex-row items-center gap-12">
+    <section class="relative bg-brand-900 bg-cover bg-center bg-no-repeat"
+             style="background-image: url('<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/HeadlineImage.jpg'); ?>');">
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-brand-900/70"></div>
 
-            <!-- Text -->
-            <div class="flex-1 text-center md:text-left">
-                <!-- Decorative dots -->
-                <div class="flex justify-center md:justify-start gap-2 mb-6">
-                    <span class="w-3 h-3 rounded-full bg-accent"></span>
-                    <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-                    <span class="w-3 h-3 rounded-full bg-blue-400"></span>
-                    <span class="w-3 h-3 rounded-full bg-red-400"></span>
-                </div>
-
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                    <?php esc_html_e('Welcome to Spotlight', 'spotlight'); ?>
-                </h1>
-
-                <p class="text-white/70 text-lg md:text-xl max-w-xl leading-relaxed">
-                    <?php esc_html_e('Spotlight is a customized staffing platform that lets you instantly find, evaluate, and interview pre-vetted talent — so you can build teams at the speed your business demands.', 'spotlight'); ?>
-                </p>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
+            <!-- Decorative dots -->
+            <div class="flex justify-center mb-6">
+                <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
+                     alt="" class="h-4 w-auto" aria-hidden="true">
             </div>
 
-            <!-- Hero Image Placeholder -->
-            <div class="flex-1 flex justify-center">
-                <div class="relative w-64 md:w-80">
-                    <!-- Replace this with your actual phone mockup image -->
-                    <div class="bg-brand-800 rounded-3xl p-4 shadow-2xl border border-white/10">
-                        <div class="bg-brand-700 rounded-2xl h-96 flex items-center justify-center">
-                            <span class="text-white/30 text-sm text-center px-4"><?php esc_html_e('Phone mockup — replace with your app screenshot', 'spotlight'); ?></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+                <?php esc_html_e('Welcome to Spotlight', 'spotlight'); ?>
+            </h1>
 
-        <!-- Curved bottom edge -->
-        <div class="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
-                <path d="M0 60L1440 60L1440 0C1440 0 1080 60 720 60C360 60 0 0 0 0L0 60Z" fill="white"/>
-            </svg>
+            <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                <?php esc_html_e('Spotlight is a customized staffing platform that lets you instantly find, evaluate, and interview pre-vetted talent — so you can build teams at the speed your business demands.', 'spotlight'); ?>
+            </p>
         </div>
     </section>
 
@@ -83,7 +62,7 @@ get_header();
                 <!-- Card 1 -->
                 <div class="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-white">
                     <div class="h-52 bg-brand-800 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/feature-fast.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/MoveFast_LessRisk.png'); ?>"
                              alt="<?php esc_attr_e('Move fast with less risk', 'spotlight'); ?>"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                              onerror="this.style.display='none'">
@@ -101,7 +80,7 @@ get_header();
                 <!-- Card 2 -->
                 <div class="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-white">
                     <div class="h-52 bg-brand-800 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/feature-inbox.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/InBoxChaos.png'); ?>"
                              alt="<?php esc_attr_e('Zero inbox chaos', 'spotlight'); ?>"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                              onerror="this.style.display='none'">
@@ -119,7 +98,7 @@ get_header();
                 <!-- Card 3 -->
                 <div class="group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-white">
                     <div class="h-52 bg-brand-800 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/feature-confidence.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Confidence_Every_Candidate.png'); ?>"
                              alt="<?php esc_attr_e('Confidence in every candidate', 'spotlight'); ?>"
                              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                              onerror="this.style.display='none'">
@@ -155,10 +134,9 @@ get_header();
                             <span class="w-3 h-3 rounded-full bg-green-400"></span>
                         </div>
                         <div class="aspect-video bg-brand-800 flex items-center justify-center p-8">
-                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/dashboard-mockup.jpg'); ?>"
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/spotlight_app.jpg'); ?>"
                                  alt="<?php esc_attr_e('Spotlight candidate dashboard', 'spotlight'); ?>"
-                                 class="w-full h-full object-cover rounded"
-                                 onerror="this.parentElement.innerHTML='<span class=\'text-white/20 text-sm\'>Dashboard screenshot placeholder</span>'">
+                                 class="w-full h-full object-cover rounded">
                         </div>
                     </div>
                 </div>
@@ -182,10 +160,9 @@ get_header();
 
                     <!-- Picture & Video -->
                     <div class="text-center">
-                        <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                            </svg>
+                        <div class="mx-auto mb-4">
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/camera.png'); ?>"
+                                 alt="" class="w-14 h-14 mx-auto" aria-hidden="true">
                         </div>
                         <h4 class="font-bold text-brand-900 mb-1"><?php esc_html_e('Picture & Video', 'spotlight'); ?></h4>
                         <p class="text-gray-500 text-sm"><?php esc_html_e('See how candidates communicate before you schedule an interview', 'spotlight'); ?></p>
@@ -193,10 +170,9 @@ get_header();
 
                     <!-- Resume -->
                     <div class="text-center">
-                        <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
+                        <div class="mx-auto mb-4">
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/resume.png'); ?>"
+                                 alt="" class="w-14 h-14 mx-auto" aria-hidden="true">
                         </div>
                         <h4 class="font-bold text-brand-900 mb-1"><?php esc_html_e('Resume', 'spotlight'); ?></h4>
                         <p class="text-gray-500 text-sm"><?php esc_html_e('Easily scan resume, skill summary and certifications', 'spotlight'); ?></p>
@@ -204,10 +180,9 @@ get_header();
 
                     <!-- Rate Candidates -->
                     <div class="text-center">
-                        <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                            </svg>
+                        <div class="mx-auto mb-4">
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/candidates.png'); ?>"
+                                 alt="" class="w-14 h-14 mx-auto" aria-hidden="true">
                         </div>
                         <h4 class="font-bold text-brand-900 mb-1"><?php esc_html_e('Rate Candidates', 'spotlight'); ?></h4>
                         <p class="text-gray-500 text-sm"><?php esc_html_e('Higher scores mean fewer interviews and better conversations', 'spotlight'); ?></p>
@@ -215,10 +190,9 @@ get_header();
 
                     <!-- Schedule Interview -->
                     <div class="text-center">
-                        <div class="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-7 h-7 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
+                        <div class="mx-auto mb-4">
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/schedule.png'); ?>"
+                                 alt="" class="w-14 h-14 mx-auto" aria-hidden="true">
                         </div>
                         <h4 class="font-bold text-brand-900 mb-1"><?php esc_html_e('Schedule Interview', 'spotlight'); ?></h4>
                         <p class="text-gray-500 text-sm"><?php esc_html_e('Direct access to talent. You control how fast you move', 'spotlight'); ?></p>
@@ -244,10 +218,9 @@ get_header();
                 </div>
                 <div class="flex-shrink-0">
                     <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/testimonial-1.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Guitar.jpg'); ?>"
                              alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'">
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -261,10 +234,9 @@ get_header();
                 </div>
                 <div class="flex-shrink-0">
                     <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/testimonial-2.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Golf _L.png'); ?>"
                              alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'">
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -278,10 +250,9 @@ get_header();
                 </div>
                 <div class="flex-shrink-0">
                     <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/testimonial-3.jpg'); ?>"
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Hallway.png'); ?>"
                              alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
-                             class="w-full h-full object-cover"
-                             onerror="this.style.display='none'">
+                             class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -300,11 +271,9 @@ get_header();
             </h2>
 
             <!-- Decorative dots -->
-            <div class="flex justify-center gap-1.5 mb-6">
-                <span class="w-2 h-2 rounded-full bg-accent"></span>
-                <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
-                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
-                <span class="w-2 h-2 rounded-full bg-red-400"></span>
+            <div class="flex justify-center mb-6">
+                <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
+                     alt="" class="h-3 w-auto" aria-hidden="true">
             </div>
 
             <p class="text-white/60 text-lg mb-10 max-w-xl mx-auto">

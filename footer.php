@@ -22,10 +22,9 @@ defined('ABSPATH') || exit;
                         <?php if (has_custom_logo()) : ?>
                             <?php the_custom_logo(); ?>
                         <?php else : ?>
-                            <span class="text-white text-xl leading-none">
-                                <span class="font-bold tracking-wide">SPOT</span><br>
-                                <span class="font-light text-sm tracking-widest">light</span>
-                            </span>
+                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/logos/spotlight_logo_3.png'); ?>"
+                                 alt="<?php bloginfo('name'); ?>"
+                                 class="h-10 w-auto">
                         <?php endif; ?>
                     </a>
                 </div>

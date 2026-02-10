@@ -37,18 +37,18 @@ add_action('wp_enqueue_scripts', function () {
                         },
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-                        display: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+                        display: ['Poppins', 'system-ui', 'sans-serif'],
                     },
                 },
             },
         }
     ");
 
-    // Google Fonts (Inter + Playfair Display).
+    // Google Fonts (Poppins).
     wp_enqueue_style(
         'spotlight-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,600&display=swap',
+        'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap',
         array(),
         null
     );
