@@ -128,22 +128,23 @@ get_header();
          CANDIDATE PROFILES – DARK SECTION
          ============================================================ -->
     <section class="relative py-20 md:py-28">
-        <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 90%;">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 100%;">
 
-            <!-- Mockup Area -->
-            <div class="mb-16">
+            <!-- Mockup Area with overlaid heading -->
+            <div class="relative mb-16">
                 <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/spotlight_app.jpg'); ?>"
                      alt="<?php esc_attr_e('Spotlight candidate dashboard', 'spotlight'); ?>"
                      class="w-full h-auto object-cover">
-            </div>
 
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mb-4">
-                    <?php esc_html_e('Candidate Profiles Contain', 'spotlight'); ?>
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
-                    <?php esc_html_e('Skills Summary, Resume, Introductory Video, Ratings and Notes, Availability', 'spotlight'); ?>
-                </p>
+                <!-- Overlay text at bottom of image -->
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/80 to-transparent pt-24 pb-10 px-6 text-center">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        <?php esc_html_e('Candidate Profiles Contain', 'spotlight'); ?>
+                    </h2>
+                    <p class="text-white/80 text-lg max-w-2xl mx-auto">
+                        <?php esc_html_e('Skills Summary, Resume, Introductory Video, Ratings and Notes, Availability', 'spotlight'); ?>
+                    </p>
+                </div>
             </div>
 
         </div>
@@ -291,10 +292,10 @@ get_header();
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-full transition-colors text-sm">
+                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
                     <?php esc_html_e('Contact us', 'spotlight'); ?>
                 </a>
-                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-full transition-colors text-sm">
+                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
                     <?php esc_html_e('Talk to an Expert', 'spotlight'); ?>
                 </a>
             </div>
