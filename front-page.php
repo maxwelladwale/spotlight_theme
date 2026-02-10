@@ -15,32 +15,39 @@ get_header();
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
-    <section class="relative bg-brand-900 bg-cover bg-center bg-no-repeat"
+    <section class="relative bg-brand-900 bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center"
              style="background-image: url('<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/HeadlineImage.jpg'); ?>');">
         <!-- Dark overlay for text readability -->
-        <div class="absolute inset-0 bg-brand-900/70"></div>
+        <div class="absolute inset-0 bg-brand-900/60"></div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
-            <!-- Decorative dots -->
-            <div class="flex justify-center mb-6">
-                <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
-                     alt="" class="h-4 w-auto" aria-hidden="true">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 w-full">
+            <div class="max-w-2xl">
+                <!-- Decorative dots -->
+                <div class="mb-6">
+                    <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/Group.png'); ?>"
+                         alt="" class="h-4 w-auto" aria-hidden="true">
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    <?php esc_html_e('Welcome to Spotlight', 'spotlight'); ?>
+                </h1>
+
+                <p class="text-white/80 text-lg md:text-xl leading-relaxed">
+                    <?php esc_html_e('Spotlight is a customized staffing platform that lets you instantly find, evaluate, and interview pre-vetted talent — so you can build teams at the speed your business demands.', 'spotlight'); ?>
+                </p>
             </div>
-
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
-                <?php esc_html_e('Welcome to Spotlight', 'spotlight'); ?>
-            </h1>
-
-            <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                <?php esc_html_e('Spotlight is a customized staffing platform that lets you instantly find, evaluate, and interview pre-vetted talent — so you can build teams at the speed your business demands.', 'spotlight'); ?>
-            </p>
         </div>
     </section>
 
     <!-- ============================================================
+         GRADIENT WRAPPER — Ready Set Staff + Candidate Profiles
+         ============================================================ -->
+    <div style="background: linear-gradient(to bottom, rgba(1,58,67,0.05) 33%, rgba(1,58,67,0.08) 100%), #fff;">
+
+    <!-- ============================================================
          READY, SET, STAFF
          ============================================================ -->
-    <section class="bg-white py-20 md:py-28">
+    <section class="py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <span class="inline-block bg-brand-900 text-white text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6">
@@ -49,7 +56,7 @@ get_header();
 
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mb-4">
                 <?php esc_html_e('Ready, Set,', 'spotlight'); ?>
-                <span class="text-accent font-display italic"><?php esc_html_e('Staff', 'spotlight'); ?></span>
+                <span class="text-[#F2970D] font-display"><?php esc_html_e('Staff', 'spotlight'); ?></span>
             </h2>
 
             <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-16 leading-relaxed">
@@ -120,33 +127,21 @@ get_header();
     <!-- ============================================================
          CANDIDATE PROFILES – DARK SECTION
          ============================================================ -->
-    <section class="relative bg-brand-900 py-20 md:py-28">
+    <section class="relative py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <!-- Mockup Area -->
-            <div class="flex justify-center mb-16">
-                <div class="relative w-full max-w-4xl">
-                    <!-- Laptop frame placeholder -->
-                    <div class="bg-brand-800 rounded-xl border border-white/10 shadow-2xl overflow-hidden">
-                        <div class="bg-brand-700 h-8 flex items-center px-4 gap-2">
-                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
-                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
-                        </div>
-                        <div class="aspect-video bg-brand-800 flex items-center justify-center p-8">
-                            <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/spotlight_app.jpg'); ?>"
-                                 alt="<?php esc_attr_e('Spotlight candidate dashboard', 'spotlight'); ?>"
-                                 class="w-full h-full object-cover rounded">
-                        </div>
-                    </div>
-                </div>
+            <!-- Mockup Area — full-width -->
+            <div class="mb-16 -mx-4 sm:-mx-6 lg:-mx-8">
+                <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/spotlight_app.jpg'); ?>"
+                     alt="<?php esc_attr_e('Spotlight candidate dashboard', 'spotlight'); ?>"
+                     class="w-full h-auto object-cover">
             </div>
 
             <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mb-4">
                     <?php esc_html_e('Candidate Profiles Contain', 'spotlight'); ?>
                 </h2>
-                <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
                     <?php esc_html_e('Skills Summary, Resume, Introductory Video, Ratings and Notes, Availability', 'spotlight'); ?>
                 </p>
             </div>
@@ -154,7 +149,7 @@ get_header();
         </div>
 
         <!-- Four Feature Items (on white strip) -->
-        <div class="bg-white py-12">
+        <div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
@@ -203,60 +198,75 @@ get_header();
         </div>
     </section>
 
+    </div><!-- end gradient wrapper -->
+
     <!-- ============================================================
          TESTIMONIALS
          ============================================================ -->
-    <section class="bg-white py-20 md:py-28">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
 
-            <!-- Testimonial 1 — text left, image right -->
-            <div class="flex flex-col md:flex-row items-center gap-12">
+    <!-- Testimonial 1 — white bg, text left, image right, blue dots -->
+    <section class="bg-white py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="flex-1">
-                    <blockquote class="text-2xl sm:text-3xl font-display italic text-brand-900 leading-snug">
+                    <blockquote class="text-xl sm:text-2xl lg:text-3xl font-medium text-brand-900 leading-snug">
                         <?php esc_html_e('Spotlight cut our hiring time from weeks to hours. We staffed an entire project faster than we\'d ever imagined', 'spotlight'); ?>
                     </blockquote>
                 </div>
-                <div class="flex-shrink-0">
-                    <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
+                <div class="flex-shrink-0 relative">
+                    <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/dots_blue.png'); ?>"
+                         alt="" class="absolute -top-5 -left-5 w-28 h-28 opacity-70" aria-hidden="true">
+                    <div class="relative w-56 h-40 sm:w-72 sm:h-48 rounded-2xl overflow-hidden shadow-lg">
+                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Golf.png'); ?>"
+                             alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial 2 — light blue-gray bg, image left, text right, red dots -->
+    <section class="bg-[#f0f5fa] py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-10 md:gap-16">
+                <div class="flex-1">
+                    <blockquote class="text-xl sm:text-2xl lg:text-3xl font-medium text-brand-900 leading-snug">
+                        <?php esc_html_e('The quality of talent was shocking – in the best way. Every candidate felt like someone we\'d already worked with.', 'spotlight'); ?>
+                    </blockquote>
+                </div>
+                <div class="flex-shrink-0 relative">
+                    <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/dots_red.png'); ?>"
+                         alt="" class="absolute -bottom-5 -right-5 w-28 h-28 opacity-70" aria-hidden="true">
+                    <div class="relative w-56 h-40 sm:w-72 sm:h-48 rounded-2xl overflow-hidden shadow-lg">
                         <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Guitar.jpg'); ?>"
                              alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
                              class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Testimonial 2 — image left, text right -->
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+    <!-- Testimonial 3 — white bg, text left, image right, blue dots -->
+    <section class="bg-white py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="flex-1">
-                    <blockquote class="text-2xl sm:text-3xl font-display italic text-brand-900 leading-snug">
-                        <?php esc_html_e('The quality of talent was shocking – in the best way. Every candidate felt like someone we\'d already worked with.', 'spotlight'); ?>
-                    </blockquote>
-                </div>
-                <div class="flex-shrink-0">
-                    <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
-                        <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Golf _L.png'); ?>"
-                             alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
-                             class="w-full h-full object-cover">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Testimonial 3 — text left, image right -->
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="flex-1">
-                    <blockquote class="text-2xl sm:text-3xl font-display italic text-brand-900 leading-snug">
+                    <blockquote class="text-xl sm:text-2xl lg:text-3xl font-medium text-brand-900 leading-snug">
                         <?php esc_html_e('Spotlight let us start a major initiative immediately. No delays, no friction just instant momentum.', 'spotlight'); ?>
                     </blockquote>
                 </div>
-                <div class="flex-shrink-0">
-                    <div class="w-52 h-52 rounded-2xl bg-gray-200 overflow-hidden">
+                <div class="flex-shrink-0 relative">
+                    <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/icons/dots_blue.png'); ?>"
+                         alt="" class="absolute -top-5 -left-5 w-28 h-28 opacity-70" aria-hidden="true">
+                    <div class="relative w-56 h-40 sm:w-72 sm:h-48 rounded-2xl overflow-hidden shadow-lg">
                         <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/Hallway.png'); ?>"
                              alt="<?php esc_attr_e('Testimonial', 'spotlight'); ?>"
                              class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
