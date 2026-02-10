@@ -15,8 +15,8 @@ get_header();
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
-    <section class="relative bg-brand-900 bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center"
-             style="background-image: url('<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/HeadlineImage.jpg'); ?>');">
+    <section class="relative bg-brand-900 bg-left bg-no-repeat min-h-[80vh] flex items-baseline"
+             style="background-image: url('<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/HeadlineImage.jpg'); ?>'); background-size: 114%;">
         <!-- Dark overlay for text readability -->
         <div class="absolute inset-0 bg-brand-900/60"></div>
 
@@ -128,10 +128,10 @@ get_header();
          CANDIDATE PROFILES – DARK SECTION
          ============================================================ -->
     <section class="relative py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 90%;">
 
-            <!-- Mockup Area — full-width -->
-            <div class="mb-16 -mx-4 sm:-mx-6 lg:-mx-8">
+            <!-- Mockup Area -->
+            <div class="mb-16">
                 <img src="<?php echo esc_url(SPOTLIGHT_URI . '/assets/images/spotlight_app.jpg'); ?>"
                      alt="<?php esc_attr_e('Spotlight candidate dashboard', 'spotlight'); ?>"
                      class="w-full h-auto object-cover">
