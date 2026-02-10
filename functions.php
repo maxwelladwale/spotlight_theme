@@ -29,6 +29,8 @@ require SPOTLIGHT_DIR . '/inc/template-tags.php';
 function spotlight_fallback_menu(): void {
     echo '<ul class="flex items-center gap-8 list-none m-0 p-0">';
     echo '<li><a href="' . esc_url(home_url('/')) . '" class="text-white/80 hover:text-white text-sm font-medium transition-colors">' . esc_html__('Home', 'spotlight') . '</a></li>';
+    echo '<li><a href="' . esc_url(home_url('/#features')) . '" class="text-white/80 hover:text-white text-sm font-medium transition-colors">' . esc_html__('Features', 'spotlight') . '</a></li>';
+    echo '<li><a href="' . esc_url(home_url('/#testimonials')) . '" class="text-white/80 hover:text-white text-sm font-medium transition-colors">' . esc_html__('Testimonials', 'spotlight') . '</a></li>';
     echo '</ul>';
 }
 

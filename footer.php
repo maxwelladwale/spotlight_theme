@@ -29,33 +29,48 @@ defined('ABSPATH') || exit;
                     </a>
                 </div>
 
+                                <!-- Contact Information -->
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-semibold text-sm mb-4"><?php esc_html_e('Contact Information', 'spotlight'); ?></h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li>
+                            <span class="block text-white/40 text-xs uppercase tracking-wider mb-0.5"><?php esc_html_e('Address', 'spotlight'); ?></span>
+                            <?php esc_html_e('1165 Sanctuary Parkway, Suite 300, Alpharetta, GA 30009', 'spotlight'); ?>
+                        </li>
+                        <li>
+                            <span class="block text-white/40 text-xs uppercase tracking-wider mb-0.5"><?php esc_html_e('Email', 'spotlight'); ?></span>
+                            <a href="mailto:inquiries@griffinglobaltech.com" class="hover:text-white transition-colors">inquiries@griffinglobaltech.com</a>
+                        </li>
+                        <li>
+                            <span class="block text-white/40 text-xs uppercase tracking-wider mb-0.5"><?php esc_html_e('Phone', 'spotlight'); ?></span>
+                            <a href="tel:+16782618289" class="hover:text-white transition-colors">+1 (678) 261-8289</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+
                 <!-- Product -->
                 <div>
                     <h4 class="font-semibold text-sm mb-4"><?php esc_html_e('Product', 'spotlight'); ?></h4>
                     <ul class="space-y-2 text-sm text-white/60">
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Features', 'spotlight'); ?></a></li>
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Pricing', 'spotlight'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/')); ?>" class="hover:text-white transition-colors"><?php esc_html_e('Home', 'spotlight'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/#features')); ?>" class="hover:text-white transition-colors"><?php esc_html_e('Features', 'spotlight'); ?></a></li>
+                        <li><a href="<?php echo esc_url(home_url('/#testimonials')); ?>" class="hover:text-white transition-colors"><?php esc_html_e('Testimonials', 'spotlight'); ?></a></li>
                     </ul>
                 </div>
 
-                <!-- Resources -->
+                <!-- Legal -->
                 <div>
-                    <h4 class="font-semibold text-sm mb-4"><?php esc_html_e('Resources', 'spotlight'); ?></h4>
+                    <h4 class="font-semibold text-sm mb-4"><?php esc_html_e('Legal', 'spotlight'); ?></h4>
                     <ul class="space-y-2 text-sm text-white/60">
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Blog', 'spotlight'); ?></a></li>
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('User guides', 'spotlight'); ?></a></li>
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Webinars', 'spotlight'); ?></a></li>
+                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Terms & Conditions', 'spotlight'); ?></a></li>
+                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Cookies', 'spotlight'); ?></a></li>
+                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Privacy Policy', 'spotlight'); ?></a></li>
                     </ul>
                 </div>
 
-                <!-- Company -->
-                <div>
-                    <h4 class="font-semibold text-sm mb-4"><?php esc_html_e('Company', 'spotlight'); ?></h4>
-                    <ul class="space-y-2 text-sm text-white/60">
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('About', 'spotlight'); ?></a></li>
-                        <li><a href="#" class="hover:text-white transition-colors"><?php esc_html_e('Join us', 'spotlight'); ?></a></li>
-                    </ul>
-                </div>
 
                 <!-- Newsletter -->
                 <div class="col-span-2 md:col-span-1">
@@ -76,16 +91,10 @@ defined('ABSPATH') || exit;
             <!-- Bottom Bar -->
             <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
 
-                <!-- Language + Copyright -->
-                <div class="flex items-center gap-4 text-xs text-white/40">
-                    <span><?php esc_html_e('English', 'spotlight'); ?></span>
-                    <span>
-                        &copy; <?php echo esc_html(date_i18n('Y')); ?>
-                        <?php bloginfo('name'); ?>, Inc. &middot;
-                        <a href="#" class="hover:text-white"><?php esc_html_e('Privacy', 'spotlight'); ?></a> &middot;
-                        <a href="#" class="hover:text-white"><?php esc_html_e('Terms', 'spotlight'); ?></a> &middot;
-                        <a href="#" class="hover:text-white"><?php esc_html_e('Sitemap', 'spotlight'); ?></a>
-                    </span>
+                <!-- Copyright -->
+                <div class="text-xs text-white/40">
+                    &copy; <?php echo esc_html(date_i18n('Y')); ?>
+                    <?php bloginfo('name'); ?>, Inc. <?php esc_html_e('All rights reserved.', 'spotlight'); ?>
                 </div>
 
                 <!-- Social Icons -->

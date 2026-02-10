@@ -51,7 +51,7 @@ get_header();
     <!-- ============================================================
          READY, SET, STAFF
          ============================================================ -->
-    <section class="py-20 md:py-28">
+    <section id="features" class="py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <span class="inline-block bg-brand-900 text-white text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6">
@@ -217,7 +217,7 @@ get_header();
          ============================================================ -->
 
     <!-- Testimonial 1 — white bg, text left, image right, blue dots -->
-    <section class="bg-white py-16 md:py-24">
+    <section id="testimonials" class="bg-white py-16 md:py-24">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
                 <div class="flex-1">
