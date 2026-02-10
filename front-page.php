@@ -28,7 +28,12 @@ get_header();
                 </div>
 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                    <?php esc_html_e('Welcome to Spotlight', 'spotlight'); ?>
+                    <?php esc_html_e('Welcome to', 'spotlight'); ?>
+                    <span class="spotlight-text" id="spotlight-torch">
+                        <?php esc_html_e('Spotlight', 'spotlight'); ?>
+                        <span class="spotlight-reveal" aria-hidden="true"><?php esc_html_e('Spotlight', 'spotlight'); ?></span>
+                        <span class="spotlight-beam" aria-hidden="true"></span>
+                    </span>
                 </h1>
 
                 <p class="text-white/80 text-lg md:text-xl leading-relaxed">

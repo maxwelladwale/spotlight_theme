@@ -179,6 +179,43 @@ html {
     border-bottom: 1px solid #e5e7eb;
 }
 
+/* --- Spotlight torch beam effect --- */
+.spotlight-text {
+    position: relative;
+    display: inline-block;
+    cursor: none;
+}
+
+.spotlight-reveal {
+    position: absolute;
+    inset: 0;
+    color: #F2970D;
+    text-shadow: 0 0 12px rgba(242, 151, 13, 0.5);
+    clip-path: circle(0px at 0px 0px);
+    pointer-events: none;
+    will-change: clip-path;
+}
+
+.spotlight-beam {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(242, 151, 13, 0.4);
+    background: radial-gradient(circle, rgba(242, 151, 13, 0.08) 0%, transparent 70%);
+    box-shadow: 0 0 15px 5px rgba(242, 151, 13, 0.15);
+    filter: blur(2px);
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+    will-change: top, left;
+}
+
+.spotlight-text:hover .spotlight-beam {
+    opacity: 1;
+}
+
 /* --- Decorative dots – bouncing wave animation --- */
 @keyframes dotBounce {
     0%, 100% { transform: translateY(0); }
