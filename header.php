@@ -34,12 +34,18 @@ window.addEventListener('load', function () {
     }
 });
 
-// Header scroll: transparent → solid
+// Header scroll: transparent → solid, toggle sign-up button
 document.addEventListener('DOMContentLoaded', function () {
     var header = document.getElementById('masthead');
+    var signupBtn = document.getElementById('signup-btn');
     if (!header) return;
     window.addEventListener('scroll', function () {
-        header.style.backgroundColor = window.scrollY > 50 ? '#013A43' : 'transparent';
+        var scrolled = window.scrollY > 50;
+        header.style.backgroundColor = scrolled ? '#013A43' : 'transparent';
+        if (signupBtn) {
+            signupBtn.style.backgroundColor = scrolled ? '#ffffff' : '#013A43';
+            signupBtn.style.color = scrolled ? '#013A43' : '#ffffff';
+        }
     });
 });
 </script>
@@ -83,10 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             <!-- Auth Buttons -->
             <div class="hidden md:flex items-center gap-4">
-                <a href="#" class="text-white/80 hover:text-white text-sm font-medium transition-colors">
+                <a href="#" class="text-sm font-medium transition-colors" style="color: #F2970D;">
                     <?php esc_html_e('Sign in', 'spotlight'); ?>
                 </a>
-                <a href="#" class="btn-glow btn-glow-accent bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-md transition-colors">
+                <a href="#" id="signup-btn" class="btn-glow btn-glow-accent text-white text-sm font-semibold px-5 py-2 rounded-md" style="background-color: #013A43; transition: background-color 0.3s ease;">
                     <?php esc_html_e('Sign up', 'spotlight'); ?>
                 </a>
             </div>
