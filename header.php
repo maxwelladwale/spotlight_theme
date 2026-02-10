@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <a href="#" class="text-sm font-medium transition-colors" style="color: #F2970D;">
                     <?php esc_html_e('Sign in', 'spotlight'); ?>
                 </a>
-                <a href="#" id="signup-btn" class="btn-glow btn-glow-accent text-white text-sm font-semibold px-5 py-2 rounded-md" style="background-color: #013A43; transition: background-color 0.3s ease;">
+                <a href="#" id="signup-btn" class="btn-glow btn-glow-white text-white text-sm font-semibold px-5 py-2 rounded-md" style="background-color: #013A43; transition: background-color 0.3s ease;">
                     <?php esc_html_e('Sign up', 'spotlight'); ?>
                 </a>
             </div>
