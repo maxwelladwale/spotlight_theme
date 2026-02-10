@@ -11,7 +11,7 @@ defined('ABSPATH') || exit;
     </div><!-- #content -->
 
     <!-- ============ FOOTER ============ -->
-    <footer id="colophon" class="bg-brand-950 text-white" role="contentinfo">
+    <footer id="colophon" class="text-white" role="contentinfo" style="background-color: #013A43;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">

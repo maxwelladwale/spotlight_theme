@@ -216,6 +216,35 @@ html {
     opacity: 1;
 }
 
+/* --- Button glow effect --- */
+.btn-glow {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.btn-glow::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    filter: blur(12px);
+}
+
+.btn-glow:hover::before {
+    opacity: 1;
+}
+
+.btn-glow-accent::before {
+    background: #2CA58D;
+}
+
+.btn-glow-white::before {
+    background: rgba(255, 255, 255, 0.5);
+}
+
 /* --- Decorative dots – bouncing wave animation --- */
 @keyframes dotBounce {
     0%, 100% { transform: translateY(0); }

@@ -285,7 +285,8 @@ get_header();
     <!-- ============================================================
          CTA — GET STARTED
          ============================================================ -->
-    <section class="bg-brand-900 py-20 md:py-28">
+    <section class="py-20 md:py-28"
+             style="background: linear-gradient(to bottom, rgba(1,58,67,0.76) 0%, rgba(1,58,67,0.80) 50%, rgba(1,58,67,1) 100%);">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
@@ -304,10 +305,10 @@ get_header();
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
+                <a href="#" class="btn-glow btn-glow-white border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
                     <?php esc_html_e('Contact us', 'spotlight'); ?>
                 </a>
-                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
+                <a href="#" class="btn-glow btn-glow-white border-2 border-white text-white hover:bg-white hover:text-brand-900 font-semibold px-8 py-3 rounded-md transition-colors text-sm">
                     <?php esc_html_e('Talk to an Expert', 'spotlight'); ?>
                 </a>
             </div>

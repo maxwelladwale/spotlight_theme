@@ -33,6 +33,15 @@ window.addEventListener('load', function () {
         });
     }
 });
+
+// Header scroll: transparent → solid
+document.addEventListener('DOMContentLoaded', function () {
+    var header = document.getElementById('masthead');
+    if (!header) return;
+    window.addEventListener('scroll', function () {
+        header.style.backgroundColor = window.scrollY > 50 ? '#013A43' : 'transparent';
+    });
+});
 </script>
 
 <div id="page" class="min-h-screen flex flex-col">
@@ -42,7 +51,7 @@ window.addEventListener('load', function () {
     </a>
 
     <!-- ============ HEADER ============ -->
-    <header id="masthead" class="bg-brand-900 sticky top-0 z-50" role="banner">
+    <header id="masthead" class="fixed top-0 left-0 right-0 z-50" role="banner" style="background-color: transparent; transition: background-color 0.3s ease;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
 
             <!-- Logo -->
@@ -77,7 +86,7 @@ window.addEventListener('load', function () {
                 <a href="#" class="text-white/80 hover:text-white text-sm font-medium transition-colors">
                     <?php esc_html_e('Sign in', 'spotlight'); ?>
                 </a>
-                <a href="#" class="bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-md transition-colors">
+                <a href="#" class="btn-glow btn-glow-accent bg-accent hover:bg-accent-dark text-white text-sm font-semibold px-5 py-2 rounded-md transition-colors">
                     <?php esc_html_e('Sign up', 'spotlight'); ?>
                 </a>
             </div>
@@ -92,7 +101,7 @@ window.addEventListener('load', function () {
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-800 border-t border-white/10">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-white/10" style="background-color: #013A43;">
             <div class="px-4 py-4 space-y-3">
                 <?php
                 wp_nav_menu(array(
